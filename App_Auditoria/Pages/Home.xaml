@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Auditoria.Pages.Home"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Home"
+    Background="{StaticResource FundoPadrao}">
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <Label
+            Margin="0,0,0,8"
+            BackgroundColor="#FF053624"
+            FontSize="24"
+            HeightRequest="70"
+            HorizontalTextAlignment="Center"
+            Text="MENU"
+            TextColor="#ffffff"
+            VerticalTextAlignment="Center" />
+        <Button
+            x:Name="btnAuditoria"
+            Padding="30,0,0,0"
+            Clicked="btnAuditoria_Clicked"
+            ContentLayout="Left,-120"
+            ImageSource="auditoria.png"
+            Style="{StaticResource btnPadraoMenu}"
+            Text="AUDITORIA" />
+    </StackLayout>
+</ContentPage>

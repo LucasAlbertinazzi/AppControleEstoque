@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = App_Auditoria
+build_property.ProjectDir = D:\Novo\AppControleEstoque\App_Auditoria\
+
+[D:/Novo/AppControleEstoque/App_Auditoria/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/Auditoria.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.Auditoria.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Auditoria.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Auditoria.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/Contagem.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.Contagem.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Contagem.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Contagem.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/ContagemFast.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.ContagemFast.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ContagemFast.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ContagemFast.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/ContagemFull.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.ContagemFull.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ContagemFull.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ContagemFull.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/Home.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.Home.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Home.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Home.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/ListAberta.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.ListAberta.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ListAberta.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ListAberta.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/ListagemContagem.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.ListagemContagem.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ListagemContagem.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ListagemContagem.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/ListFechada.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.ListFechada.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ListFechada.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ListFechada.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Pages/login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Pages.login.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\login.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\login.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Novo/AppControleEstoque/App_Auditoria/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = App_Auditoria.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

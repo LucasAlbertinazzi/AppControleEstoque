@@ -1,0 +1,12 @@
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\App_Auditoria.csproj.AssemblyReference.cache
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+E:\Pousada-APP-ControleEstoque\App_Auditoria\obj\Release\net6.0-windows10.0.19041.0\win10-x64\App_Auditoria.GeneratedMSBuildEditorConfig.editorconfig

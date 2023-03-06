@@ -1,0 +1,1 @@
+D:\Novo\AppControleEstoque\App_Auditoria\App_Auditoria.csproj;x64

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Auditoria.Pages.ListagemContagem"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ListagemContagem"
+    Background="{StaticResource FundoPadrao}"
+    Loaded="ContentPage_Loaded">
+    <ContentPage.Resources>
+        <Style TargetType="VerticalStackLayout">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Transparent" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView VerticalScrollBarVisibility="Default">
+        <StackLayout>
+            <Label
+                Background="#FF053624"
+                FontSize="24"
+                HeightRequest="60"
+                HorizontalTextAlignment="Center"
+                Text="CONTAGENS"
+                TextColor="#ffffff"
+                VerticalTextAlignment="Center" />
+            <CollectionView
+                x:Name="colecao"
+                ItemsSource="{Binding listaContagem}"
+                MinimumHeightRequest="60"
+                SelectionChanged="colecao_SelectionChanged"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout
+                            Margin="12,12,12,6"
+                            Padding="8"
+                            BackgroundColor="#FF053624"
+                            Spacing="15">
+                            <HorizontalStackLayout Spacing="160">
+                                <Label
+                                    FontFamily="Roboto"
+                                    FontSize="18"
+                                    Text="{Binding Id}"
+                                    TextColor="White" />
+                                <Label
+                                    FontFamily="Roboto"
+                                    FontSize="18"
+                                    Text="{Binding DataAbre}"
+                                    TextColor="White" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label
+                                    FontFamily="Roboto"
+                                    FontSize="18"
+                                    Text="{Binding Local}"
+                                    TextColor="White" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label
+                                    FontFamily="Roboto"
+                                    FontSize="18"
+                                    Text="{Binding Categoria}"
+                                    TextColor="White" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label
+                                    FontFamily="Roboto"
+                                    FontSize="18"
+                                    LineBreakMode="TailTruncation"
+                                    Text="{Binding Grupos}"
+                                    TextColor="White" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

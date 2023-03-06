@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    x:Class="App_Auditoria.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App_Auditoria">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--#region 1- Background-->
+
+            <LinearGradientBrush x:Key="FundoPadrao" StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Offset="0" Color="#22794B" />
+                <GradientStop Offset="1" Color="#0D5B3E" />
+            </LinearGradientBrush>
+
+            <!--#endregion-->
+
+            <!--#region 2- TextBox-->
+
+            <Style x:Key="TextBoxLogin" TargetType="Entry">
+                <Setter Property="TextColor" Value="#333" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="MaxLength" Value="10" />
+                <Setter Property="PlaceholderColor" Value="#333" />
+            </Style>
+
+            <!--#endregion-->
+
+            <!--#region 3- Button-->
+
+            <Style x:Key="btnPadraoMenu" TargetType="Button">
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="HeightRequest" Value="150" />
+                <Setter Property="TextColor" Value="#fff" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="Margin" Value="16,8" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderColor" Value="#ffffff" />
+                <Setter Property="Background" Value="#FF053624" />
+                <Setter Property="FontAutoScalingEnabled" Value="True" />
+            </Style>
+
+            <!--#endregion-->
+
+            <!--#region 4- Picker-->
+
+            <Style x:Key="PickerPadrao" TargetType="Picker">
+                <Setter Property="TitleColor" Value="#333" />
+                <Setter Property="FontFamily" Value="Roboto" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAutoScalingEnabled" Value="True" />
+            </Style>
+
+            <!--#endregion-->
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

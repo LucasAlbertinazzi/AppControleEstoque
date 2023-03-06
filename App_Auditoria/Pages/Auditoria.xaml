@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Auditoria.Pages.Auditoria"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Auditoria"
+    Background="{StaticResource FundoPadrao}">
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <Label
+            Margin="0,0,0,8"
+            BackgroundColor="#FF053624"
+            FontSize="24"
+            HeightRequest="70"
+            HorizontalTextAlignment="Center"
+            Text="AUDITORIA"
+            TextColor="#ffffff"
+            VerticalTextAlignment="Center" />
+        <Button
+            x:Name="btnCriaAuditoria"
+            Padding="20,0,0,0"
+            Clicked="btnCriaAuditoria_Clicked"
+            ContentLayout="Left,-30"
+            ImageSource="contagemfull.png"
+            IsVisible="False"
+            Style="{StaticResource btnPadraoMenu}"
+            Text="CONTAGEM COMPLETA" />
+        <Button
+            x:Name="btnContagemRapida"
+            Padding="30,0,0,0"
+            Clicked="btnContagemRapida_Clicked"
+            ContentLayout="Left,-50"
+            ImageSource="contagemfast.png"
+            Style="{StaticResource btnPadraoMenu}"
+            Text="CONTAGEM RÁPIDA" />
+        <Button
+            x:Name="btnListaContagem"
+            Padding="30,0,0,0"
+            Clicked="btnListaContagem_Clicked"
+            ContentLayout="Left,-50"
+            ImageSource="listfull.png"
+            IsVisible="False"
+            Style="{StaticResource btnPadraoMenu}"
+            Text="LISTAR CONTAGEM" />
+        <Button
+            x:Name="btnAberta"
+            Padding="30,0,0,0"
+            Clicked="btnAberta_Clicked"
+            ContentLayout="Left,-30"
+            ImageSource="listopen.png"
+            Style="{StaticResource btnPadraoMenu}"
+            Text="CONTAGENS ABERTAS" />
+        <Button
+            x:Name="btnFechada"
+            Padding="20,0,0,0"
+            Clicked="btnFechada_Clicked"
+            ContentLayout="Left,-20"
+            ImageSource="listclosed.png"
+            Style="{StaticResource btnPadraoMenu}"
+            Text="CONTAGENS FECHADAS" />
+        <ActivityIndicator
+            x:Name="actInd"
+            IsRunning="{Binding IsLoading}"
+            IsVisible="{Binding IsLoading}"
+            Color="White" />
+    </StackLayout>
+</ContentPage>

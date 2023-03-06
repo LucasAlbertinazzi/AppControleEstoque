@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Auditoria.Pages.ContagemFull"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="crl-namespace:App_Auditoria.ViewModels"
+    Title="CriaContagem"
+    Background="{StaticResource FundoPadrao}"
+    Loaded="ContentPage_Loaded">
+    <StackLayout>
+        <Label
+            Margin="0,0,0,8"
+            BackgroundColor="#FF053624"
+            FontSize="24"
+            HeightRequest="70"
+            HorizontalTextAlignment="Center"
+            Text="CONTAGEM COMPLETA"
+            TextColor="#ffffff"
+            VerticalTextAlignment="Center" />
+        <Grid MinimumHeightRequest="650" RowDefinitions="*">
+            <StackLayout Padding="8" Orientation="Vertical">
+                <Label
+                    Padding="5"
+                    FontFamily="Rooboto"
+                    FontSize="20"
+                    HeightRequest="40"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Local:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Frame
+                    Margin="0,0,0,15"
+                    Padding="5"
+                    BackgroundColor="White"
+                    CornerRadius="6"
+                    HeightRequest="60">
+                    <Picker
+                        x:Name="_listaLocal"
+                        Title="Selecione o local..."
+                        HorizontalTextAlignment="Start"
+                        ItemDisplayBinding="{Binding Local}"
+                        ItemsSource="{Binding lista}"
+                        Style="{StaticResource PickerPadrao}"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+                <Label
+                    Padding="5"
+                    FontFamily="Rooboto"
+                    FontSize="20"
+                    HeightRequest="40"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Categoria:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Frame
+                    Margin="0,0,0,15"
+                    Padding="5"
+                    BackgroundColor="White"
+                    CornerRadius="6"
+                    HeightRequest="60">
+                    <Picker
+                        x:Name="_listaCat"
+                        Title="Selecione a categoria..."
+                        HorizontalTextAlignment="Start"
+                        ItemDisplayBinding="{Binding Descricao}"
+                        ItemsSource="{Binding lista}"
+                        SelectedIndexChanged="_listaCat_SelectedIndexChanged"
+                        Style="{StaticResource PickerPadrao}"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Label
+                    Padding="5"
+                    FontFamily="Rooboto"
+                    FontSize="20"
+                    HeightRequest="40"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Grupos:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Frame
+                    Margin="0,0,0,5"
+                    Padding="5"
+                    BackgroundColor="White"
+                    CornerRadius="6"
+                    HeightRequest="60">
+                    <Picker
+                        x:Name="_listaGrupos"
+                        Title="Selecione os grupos..."
+                        HorizontalTextAlignment="Start"
+                        ItemDisplayBinding="{Binding Descricao}"
+                        ItemsSource="{Binding lista}"
+                        SelectedIndexChanged="_listaGrupos_SelectedIndexChanged"
+                        Style="{StaticResource PickerPadrao}"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+                <Frame
+                    x:Name="frameLabel"
+                    Padding="5"
+                    BackgroundColor="White"
+                    CornerRadius="6"
+                    IsVisible="False"
+                    MinimumHeightRequest="45">
+                    <Label
+                        x:Name="textGrupos"
+                        FontFamily="Roboto"
+                        FontSize="18"
+                        TextColor="Black"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+            </StackLayout>
+        </Grid>
+        <Button
+            x:Name="btnCriaContagem"
+            Margin="8"
+            BackgroundColor="#FF053624"
+            BorderColor="White"
+            BorderWidth="1"
+            Clicked="btnCriaContagem_Clicked"
+            CornerRadius="6"
+            FontFamily="Roboto"
+            FontSize="20"
+            HeightRequest="60"
+            Text="Salvar"
+            TextColor="#fff" />
+        <Label
+            x:Name="lblaviso"
+            FontSize="14"
+            HorizontalTextAlignment="Center"
+            IsVisible="False"
+            Text="Preencha todos os campos"
+            TextColor="White" />
+    </StackLayout>
+</ContentPage>

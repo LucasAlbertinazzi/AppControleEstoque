@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Auditoria.Pages.ContagemFast"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ContagemFast"
+    Background="{StaticResource FundoPadrao}"
+    Loaded="ContentPage_Loaded">
+    <VerticalStackLayout>
+        <Label
+            Margin="0,0,0,8"
+            BackgroundColor="#FF053624"
+            FontSize="24"
+            HeightRequest="50"
+            HorizontalTextAlignment="Center"
+            Text="CONTAGEM RÁPIDA"
+            TextColor="#ffffff"
+            VerticalTextAlignment="Center" />
+        <VerticalStackLayout Margin="12">
+
+            <HorizontalStackLayout
+                Padding="5,0"
+                HeightRequest="40"
+                Spacing="130">
+                <Label
+                    FontFamily="Rooboto"
+                    FontSize="20"
+                    HorizontalTextAlignment="Start"
+                    Text="Local:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Label
+                    x:Name="lastId"
+                    FlowDirection="RightToLeft"
+                    FontFamily="Rooboto"
+                    FontSize="20"
+                    HorizontalOptions="End"
+                    HorizontalTextAlignment="End"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+            </HorizontalStackLayout>
+
+
+            <Frame
+                Margin="0,0,0,15"
+                Padding="5"
+                BackgroundColor="White"
+                CornerRadius="6"
+                HeightRequest="60">
+                <Picker
+                    x:Name="_listaLocal"
+                    Title="Selecione o local..."
+                    HorizontalTextAlignment="Start"
+                    ItemDisplayBinding="{Binding Local}"
+                    ItemsSource="{Binding lista}"
+                    Style="{StaticResource PickerPadrao}"
+                    VerticalOptions="Center"
+                    VerticalTextAlignment="Center" />
+            </Frame>
+
+            <Label
+                Padding="5"
+                FontFamily="Rooboto"
+                FontSize="20"
+                HeightRequest="40"
+                HorizontalOptions="StartAndExpand"
+                Text="Item:"
+                TextColor="White"
+                VerticalOptions="Center" />
+
+            <Frame
+                Padding="5"
+                BackgroundColor="White"
+                CornerRadius="6"
+                HeightRequest="60">
+                <SearchBar
+                    x:Name="sbItens"
+                    FontFamily="Roboto"
+                    FontSize="18"
+                    IsTextPredictionEnabled="False"
+                    Placeholder="Digite o nome do item..."
+                    PlaceholderColor="Black"
+                    TextChanged="sbItens_TextChanged"
+                    TextTransform="Uppercase" />
+            </Frame>
+
+            <Grid Grid.Row="0" RowDefinitions="*">
+                <ScrollView
+                    x:Name="frItens"
+                    IsVisible="False"
+                    Orientation="Vertical"
+                    VerticalScrollBarVisibility="Never">
+                    <Frame
+                        Margin="0,0,0,-6"
+                        Padding="5"
+                        BackgroundColor="White"
+                        CornerRadius="6"
+                        HeightRequest="300"
+                        IsClippedToBounds="False">
+                        <ListView
+                            x:Name="_listaItem"
+                            ItemSelected="_listaItem_ItemSelected"
+                            ItemsSource="{Binding lista_itens}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Label
+                                            FontFamily="Roboto"
+                                            FontSize="18"
+                                            HeightRequest="60"
+                                            HorizontalTextAlignment="Start"
+                                            Text="{Binding Descricao}"
+                                            TextColor="Black"
+                                            VerticalTextAlignment="Center" />
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Frame>
+                </ScrollView>
+
+                <Label
+                    x:Name="lblItensContagem"
+                    Margin="0,15,0,0"
+                    Padding="5"
+                    FontFamily="Rooboto"
+                    FontSize="20"
+                    HeightRequest="40"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Itens para contagem:"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+            <Frame
+                x:Name="frListaVis"
+                Margin="0,0,0,15"
+                Padding="10"
+                Background="#83B99C"
+                BackgroundColor="White"
+                CornerRadius="6"
+                HeightRequest="360">
+                <ScrollView HorizontalScrollBarVisibility="Always">
+                    <CollectionView
+                        x:Name="_listaCard"
+                        ItemsSource="{Binding card_itens}"
+                        VerticalScrollBarVisibility="Default">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame
+                                    Margin="0,0,0,15"
+                                    Padding="0"
+                                    BackgroundColor="#FF053624"
+                                    BorderColor="White"
+                                    CornerRadius="6"
+                                    HeightRequest="60">
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Padding="5"
+                                            FontFamily="Roboto"
+                                            FontSize="16"
+                                            HorizontalTextAlignment="Start"
+                                            Text="{Binding Descricao}"
+                                            TextColor="White"
+                                            VerticalTextAlignment="Center"
+                                            WidthRequest="175" />
+                                        <Button
+                                            x:Name="btnMenos"
+                                            BackgroundColor="#D83A3A"
+                                            Clicked="btnMenos_Clicked"
+                                            CommandParameter="{Binding IdItem}"
+                                            CornerRadius="0"
+                                            FontFamily="Roboto"
+                                            FontSize="26"
+                                            HeightRequest="56"
+                                            Text="-"
+                                            TextColor="#fff"
+                                            WidthRequest="55" />
+                                        <Entry
+                                            Background="White"
+                                            FontFamily="Roboto"
+                                            FontSize="20"
+                                            HeightRequest="56"
+                                            HorizontalTextAlignment="Center"
+                                            Keyboard="Numeric"
+                                            MaxLength="4"
+                                            Text="{Binding QuantidadeCont}"
+                                            TextColor="Black"
+                                            VerticalTextAlignment="Center"
+                                            WidthRequest="54" />
+                                        <Button
+                                            x:Name="btnMais"
+                                            BackgroundColor="#FFBA00"
+                                            Clicked="btnMais_Clicked"
+                                            CommandParameter="{Binding IdItem}"
+                                            CornerRadius="0"
+                                            FontFamily="Roboto"
+                                            FontSize="26"
+                                            HeightRequest="56"
+                                            Text="+"
+                                            TextColor="#fff"
+                                            WidthRequest="54" />
+                                    </HorizontalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </Frame>
+
+            <Grid ColumnSpacing="15" HeightRequest="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    x:Name="btnSalvar"
+                    Grid.Column="0"
+                    BackgroundColor="#FF053624"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    Clicked="btnSalvar_Clicked"
+                    CornerRadius="6"
+                    FontFamily="Roboto"
+                    FontSize="20"
+                    Text="Salvar"
+                    TextColor="#fff" />
+                <Button
+                    x:Name="btnFinalizar"
+                    Grid.Column="1"
+                    BackgroundColor="Red"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    Clicked="btnFinalizar_Clicked"
+                    CornerRadius="6"
+                    FontFamily="Roboto"
+                    FontSize="20"
+                    Text="Finalizar"
+                    TextColor="#fff" />
+            </Grid>
+
+            <ActivityIndicator
+                x:Name="actInd"
+                IsRunning="{Binding IsLoading}"
+                IsVisible="{Binding IsLoading}"
+                Color="White" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
